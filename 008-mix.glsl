@@ -28,7 +28,9 @@ void main() {
 	vec4 colourA = rectangle(mod(st * (sin(u_time*3.) + 2.) * 2., 1.), 0.148);
 
 	vec2 stB = vec2(st.x + st.y, st.x - st.y);
-	vec4 colourB = circle(mod(stB * (sin(u_time*2.) + 2.) * 2.5, 1.), 1.);
+	vec4 colourB = circle(mod(stB * (sin(u_time*2.) + 2.) * 2.5, 1.), 0.3);
 
-	return mix(colourA, colourB, 0.5);
+	gl_FragColor =  mix(colourA, colourB, 0.5);
 }
+
+
